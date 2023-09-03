@@ -6,7 +6,7 @@ public class GameCustomization
     public Color backgroundColor = Color.white;
     public Color backgroundColorOnWin = Color.red;
 
-    public Color fontColor = Color.green;
+    public Color fontColor = Color.black;
     public GameCustomization(Color backgroundColor, Color backgroundColorOnWin, Color fontColor)
     {
         this.backgroundColor = backgroundColor;
@@ -32,6 +32,7 @@ public abstract class GameState
     public int nextTurn = 1; // X
     public int gameId;
     public bool isMainGame = false;
+    public bool isActive = false;
 
     public onWinDelegate onWin;
     public onValueChangeDelegate onValueChange;

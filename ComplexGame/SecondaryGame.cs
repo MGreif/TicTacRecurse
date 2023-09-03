@@ -20,7 +20,13 @@ public class SecondaryGame : Game
     // Update is called once per frame
     void Update()
     {
+        if (this.state.isActive)
+        {
+            this.background.GetComponent<SpriteRenderer>().color = Color.white;
+        } else
+        {
+            this.background.GetComponent<SpriteRenderer>().color = Color.black;
 
-
+        }
     }
 }

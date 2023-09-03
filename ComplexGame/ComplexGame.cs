@@ -75,7 +75,21 @@ public class ComplexGame : MonoBehaviour
                     state.nextTurn = value == 1 ? 2 : 1;
                     state.gameOver = this.state.gameOver;
                     this.state.values[state.gameId] = state.winner;
+                    state.isActive = false;
                 }
+                if (this.state.games.First(s => s.gameId == id).winner != 0)
+                {
+                    foreach (SimpleGameState state in this.state.games)
+                    {
+                        if (state.winner != 0) continue;
+                        state.isActive = true;
+                    }
+                } else
+                {
+                    this.state.games.First(s => s.gameId == id).isActive = true;
+
+                }
+
                 this.state.nextTurn = value == 1 ? 2 : 1;
                 this.nextTurnText.text = (value == 1 ? "O" : "X") + " is next turn!";
                 this.state.CheckWin(this.state.values);
