@@ -54,6 +54,8 @@ MonoBehaviour:
   row: 0
   col: 0
   text: {fileID: 0}
+  game: {fileID: 0}
+  id: 0
 --- !u!222 &4577963390608152591
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84,8 +86,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a5aa6adb8649adc419c43fadd64895b7, type: 2}
+  m_sharedMaterial: {fileID: -5111230091439880325, guid: a5aa6adb8649adc419c43fadd64895b7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
