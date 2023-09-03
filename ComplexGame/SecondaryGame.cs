@@ -12,7 +12,7 @@ public class SecondaryGame : Game
         };
     }
 
-    void Start()
+    void Awake()
     {
         initialize();
     }

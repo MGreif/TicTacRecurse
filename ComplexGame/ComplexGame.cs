@@ -61,11 +61,15 @@ public class ComplexGame : MonoBehaviour
 
             state.validators = vals;
             state.isMainGame = false;
-
+            if (state.gameId == this.state.activeGame)
+            {
+                state.isActive = true;
+            }
             state.onValueChange += (int gameId, int id, int value) =>
             {
                 this.state.setActiveGame(id);
-                if (this.state.games.First(s => s.gameId == id).winner != 0)
+                SimpleGameState found = this.state.games.FirstOrDefault(s => s.gameId == id);
+                if (found.winner != 0)
                 {
                     this.state.setActiveGame(-1);
                 }
