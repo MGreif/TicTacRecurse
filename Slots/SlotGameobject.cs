@@ -75,6 +75,8 @@ public class SlotGameobject : MonoBehaviour
     {
         isHovered = true && this.slot.content == 0;
         if (this.slot.content != 0) return;
+        Cross.SetActive(false);
+        Circle.SetActive(false);
         if (this.game.state.nextTurn == 1) 
         {
             Cross.SetActive(true);
