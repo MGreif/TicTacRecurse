@@ -9,7 +9,19 @@ public class Init : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        winnerText.text = (MainState.winner == 1 ? "X" : "O") + " Won!!";
+        string winner;
+        switch(MainState.winner)
+        {
+            case 1:
+                winner = "X";
+                break;
+            case 2: winner = "O";
+                break;
+            default:
+                winner = "No One";
+                break;
+        }
+        winnerText.text =string.Format("{0} won!!", winner);
     }
 
     // Update is called once per frame
